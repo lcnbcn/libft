@@ -6,15 +6,13 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:56:58 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/09/21 18:35:42 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/09/22 13:28:11 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-
-
-
+#define LIBFT_H
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
 #endif
-
