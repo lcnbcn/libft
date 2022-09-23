@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 16:56:58 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/09/23 23:15:01 by lucida-s         ###   ########.fr       */
+/*   Created: 2022/09/23 22:55:14 by lucida-s          #+#    #+#             */
+/*   Updated: 2022/09/23 23:14:42 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <stdio.h>
-# include <unistd.h>
+#include "libft.h"
 
-int	ft_isalpha(int c);
-int	ft_toupper(int c);
-int	ft_isdigit(int c);
-
-#endif
+int	ft_isdigit(int c)
+{
+	if (c >= 48 && c <= 57)
+	{
+		return (1);
+	}
+	return (0);
+}

@@ -6,19 +6,20 @@
 #    By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 21:12:10 by lucida-s          #+#    #+#              #
-#    Updated: 2022/09/23 22:19:47 by lucida-s         ###   ########.fr        #
+#    Updated: 2022/09/23 23:15:05 by lucida-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-SRC = ft_isalpha.c
+SRC = ft_isalpha.c ft_toupper.c ft_isdigit.c \
+
 OBJS = $(SRC:.c=.o)
 HEADER = libft.h
 LIB = ar -rcs
 CFLAGS = -Wall -Werror -Wextra
 
-%.o: %.c
-	gcc $(CFLAGS) -I./ -c $< -o $@
+%.o:%.c
+	gcc $(CFLAGS) -I libft.h -c $< -o $@
 
 all: $(NAME)
 
