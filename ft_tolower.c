@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 16:56:58 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/09/23 23:30:06 by lucida-s         ###   ########.fr       */
+/*   Created: 2022/09/23 23:25:19 by lucida-s          #+#    #+#             */
+/*   Updated: 2022/09/23 23:40:20 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <stdio.h>
-# include <unistd.h>
+#include "libft.h"
 
-int	ft_isalpha(int c);
-int	ft_toupper(int c);
-int	ft_isdigit(int c);
-int	ft_tolower(int c);
-
-#endif
+int	ft_tolower(int c)
+{
+	if (c >= 65 && c <= 90)
+	{
+		c += 32;
+		return (c);
+	}
+	return (c);
+}	
