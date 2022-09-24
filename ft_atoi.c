@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 16:56:58 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/09/24 22:25:25 by lucida-s         ###   ########.fr       */
+/*   Created: 2022/07/28 21:52:00 by lucida-s          #+#    #+#             */
+/*   Updated: 2022/09/24 20:25:30 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <stdio.h>
-# include <unistd.h>
+#include <stdio.h>
 
-int		ft_isalpha(int c);
-int		ft_toupper(int c);
-int		ft_isdigit(int c);
-int		ft_tolower(int c);
-int		ft_isalnum(int c);
-size_t	ft_strlen(const char *s);
-int		ft_atoi(const char *str);
-int		ft_isprint(int c);
-#endif
+int	ft_atoi(const char *str)
+{
+	int	i;
+	int	j;
+	int	h;
+
+	h = 0;
+	i = 0;
+	j = 1;
+	while (str[h] == 32 || (str[h] >= 9 && str[h] <= 13))
+	{
+		h++;
+	}
+	while (str[h] == '-' || str[h] == '+')
+	{
+		if (str[h] == '-')
+			j *= -1;
+		h++;
+	}
+	while (str[h] >= '0' && str[h] <= '9')
+	{
+		i = (i * 10) + (str[h] - '0');
+		h++;
+	}
+	return (i * j);
+}

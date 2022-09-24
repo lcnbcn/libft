@@ -6,13 +6,13 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 16:02:21 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/09/24 16:33:33 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/09/24 19:41:43 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	int	count;
 
