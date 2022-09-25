@@ -6,14 +6,14 @@
 #    By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 21:12:10 by lucida-s          #+#    #+#              #
-#    Updated: 2022/09/24 22:25:37 by lucida-s         ###   ########.fr        #
+#    Updated: 2022/09/25 21:04:53 by lucida-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 SRC = ft_isalpha.c ft_toupper.c ft_isdigit.c \
 	ft_tolower.c ft_isalnum.c ft_strlen.c \
-	ft_atoi.c ft_isprint.c
+	ft_isprint.c
 
 OBJS = $(SRC:.c=.o)
 HEADER = libft.h

@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:56:58 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/09/24 22:25:25 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/09/25 21:05:32 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int		ft_isdigit(int c);
 int		ft_tolower(int c);
 int		ft_isalnum(int c);
 size_t	ft_strlen(const char *s);
-int		ft_atoi(const char *str);
 int		ft_isprint(int c);
+
 #endif

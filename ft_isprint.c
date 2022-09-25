@@ -6,17 +6,17 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 20:45:05 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/09/24 22:25:03 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/09/25 21:12:21 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c);
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 	{
-		return (c);
+		return (1);
 	}
 	return (0);
 }
