@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 16:46:42 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/09/30 18:55:37 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/04 18:27:02 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0')
-	{
-		if (*s == c)
-		{
-			return ((char *)s);
-			s++;
-		}
-	}
+	char	ch;
+
+	ch = (char)c;
+	while (*s != '\0' && ch != *s)
+		s++;
+	if (*s == ch)
+		return ((char *)s);
 	return (0);
 }
