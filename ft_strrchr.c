@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 20:54:55 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/04 21:16:26 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/05 08:21:02 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	ch;
 	int		size;
-
-	size = ft_strlen(s);
+	const char	*ini;
+	char		ch;
 
 	ch = (char)c;
-	while (*s <= size && *s != 0)
+	ini = s;
+	size = ft_strlen(s);
+	s = (s + size);
+	while (*s != *ini && ch != *s)
 		s--;
-	if (*s == ch)
+	if (ch == *s)
 		return ((char *)s);
 	return (0);
 }
