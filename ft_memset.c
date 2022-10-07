@@ -1,33 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/24 12:31:52 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/07 13:27:27 by lucida-s         ###   ########.fr       */
+/*   Created: 2022/10/07 11:20:13 by lucida-s          #+#    #+#             */
+/*   Updated: 2022/10/07 11:26:34 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
-{
-	if (ft_isalpha(c) || ft_isdigit(c))
-	{
-		return (1);
-	}
-	return (0);
-}
-/*
-int	main(void)
-{
-	// testear ft_isalnum
-
-	int alphan;
-
-	alphan ='7';
-
-	printf("\nEsta funcion retorna 1 si es un alphanumerico, 0 si no.\n\nResultado: %i\n\n", ft_isalnum(alphan));
-}*/
+void	*memset(void *b, int c, size_t len)
