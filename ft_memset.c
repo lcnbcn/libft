@@ -24,7 +24,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-/*
+
 int	main(void)
 {
 	char	buffer[8];
@@ -39,4 +39,4 @@ int	main(void)
 	printf("\nEsta funcion retorna su primer argumento.\n\nResultado: %s\n\n", res);
 
 	return (0);
-}*/
+}

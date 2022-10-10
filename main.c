@@ -61,10 +61,21 @@ int	main(void)
 {
 	// testear ft_toupper
 
-	int	ch  ='2';
+	int	ch  ='l';
 
 
 	printf("\nEsta funcion retorna un caracter en mayuscula en caso que esta sea minuscula.\n\nResultado: %c\n\n", ft_toupper(ch));
+}
+
+
+int	main(void)
+{
+	// testear ft_lower
+
+	int	ch  ='L';
+
+
+	printf("\nEsta funcion retorna un caracter en mayuscula en caso que esta sea minuscula.\n\nResultado: %c\n\n", ft_lower(ch));
 }
 
 int	main(void)
@@ -77,3 +88,33 @@ int	main(void)
 
 	printf("\nEsta funcion retorna un puntero al carácter encontrado en la string, o puntero nulo si no se encuentra dicho carácter.\n\nResultado: %s\n\n", ft_strchr(str, ch));
 }
+
+int	main(void)
+{
+	// testear ft_strrchr
+
+	char	*str = "Hello, hello";
+	int	ch = 'e';
+
+
+	printf("\nEsta funcion retorna un puntero al carácter encontrado en la string, o puntero nulo si no se encuentra dicho carácter.\n\nResultado: %s\n\n", ft_strrchr(str, ch));
+}
+
+
+int	main(void)
+{
+	//testear ft_memset
+
+	char	buffer[8];
+	int	ch;
+	size_t	len;
+	char	*res;
+
+	ch = 'b';
+	len = 4;
+	res = ft_memset(buffer, ch,len);
+
+	printf("\nEsta funcion retorna su primer argumento.\n\nResultado: %s\n\n", res);
+
+	return (0);
+}i

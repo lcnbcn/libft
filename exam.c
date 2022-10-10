@@ -1,23 +1,29 @@
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-				{
-				return (1);
-				}
-	return (0);
+	size_t	cnt;
+
+	cnt = 0;
+	while (cnt < len)
+	{
+		((unsigned char *)b)[cnt] = c;
+		cnt++;
 	}
-
-
+	return (b);
+}
 
 int	main(void)
 {
-	// testear ft_isalpha
+	// testear ft_memset
 
+	char	buffer[8];
 	int	ch;
+	int	len;
+	char	*res;
 
-	ch = 'B';
-
-	printf("\nEsta funcion retorna 1 si es un caracter, 0 si no.\n\nResultado: %i\n\n", ft_isalpha(ch));
+	ch = 'x';
+	len = 4;
+	res = ft_memset(buffer, ch, len);
+	printf("\nEsta funcion retorna su primer argumento.\n\nResultado: %s\n\n", res);
 }
