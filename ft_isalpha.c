@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:35:08 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/07 12:54:53 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/10 12:49:02 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ int	main(void)
 
 	ch = '1';
 
-	printf("\nEsta funcion retorna 1 si es un caracter, 0 si no.\n\nResultado: %i\n\n", ft_isalpha(ch));
+	printf("\nEsta funcion retorna 1 si es un caracter, 0 si no.\
+	\n\nResultado: %i\n\n", ft_isalpha(ch));
 }*/

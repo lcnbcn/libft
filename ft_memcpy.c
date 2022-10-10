@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 09:52:47 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/07 07:31:10 by lucida-s         ###   ########.fr       */
+/*   Created: 2022/10/10 15:06:00 by lucida-s          #+#    #+#             */
+/*   Updated: 2022/10/10 16:47:50 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int        ft_strncmp(const char *s1, const char *s2, size_t n)
-{
-    size_t    i;
-    size_t    j;
 
-    i = ft_strlen(s1);
-    j = ft_strlen(s2);
-    while (s1[--i] == s2[--j] && i >= 0 && j >= 0)
-    {
-        n--;
-        if (n == 0)
-            return (0);
-    }
-    return ((unsigned char)(s1[i]) - (unsigned char)(s2[j]));
-}
-/*nt	main(void)
+void	*ft_memcpy(void *restrict dst, void *restrict src, size_t n)
 {
-	
-	printf("el resultado de la comparacion es: %d\n\n", ft_strncmp("T", "t", 15));
-}*/
+
+}
+
+int	main(void)
+{
+	const char	dst[20] = "destino";
+	const char	src[20] = "fuente";
+	size_t	nb;
+
+	nb = 20;
+
+	printf("\n%s\n\n", ft_memcpy((void*)dst, (void *)src, nb));
+	return (0);
+}

@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 22:36:31 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/10 12:59:29 by lucida-s         ###   ########.fr       */
+/*   Created: 2022/10/10 10:42:28 by lucida-s          #+#    #+#             */
+/*   Updated: 2022/10/10 13:29:43 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	if (c >= 97 && c <= 122)
+	size_t	size;
+
+	size = 0;
+	while (size < n)
 	{
-		c -= 32;
-		return (c);
+		((unsigned char *)s)[size] = '\0';
+		size++;
 	}
-	return (c);
 }
 /*
 int	main(void)
 {
-	// testear ft_toupper
+	//testear ft_memset
 
-	int	ch  ='2';
+	char	str[8];
+	size_t	nbr;
+	char	*res;
 
+	nbr = 4;
+	res = (char *)ft_bzero(str, nbr);
 
-	printf("\nEsta funcion retorna un caracter en mayuscula en \
-	caso que esta sea minuscula.\
-	\n\nResultado: %c\n\n", ft_toupper(ch));
+	printf("\nEsta funcion rellana de zeros la srting asignada.\
+	\n\nResultado: %s\n\n", res);
+
+	return (0);
 }*/

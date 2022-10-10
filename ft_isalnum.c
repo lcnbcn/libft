@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 12:31:52 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/07 13:27:27 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/10 12:47:26 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int	main(void)
 
 	alphan ='7';
 
-	printf("\nEsta funcion retorna 1 si es un alphanumerico, 0 si no.\n\nResultado: %i\n\n", ft_isalnum(alphan));
+	printf("\nEsta funcion retorna 1 si es un alphanumerico, 0 si no. \ 
+	\n\nResultado: %i\n\n", ft_isalnum(alphan));
 }*/

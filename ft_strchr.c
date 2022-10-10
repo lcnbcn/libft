@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 16:46:42 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/07 15:09:10 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/10 12:55:49 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,7 @@ int	main(void)
 	int	ch = 'o';
 
 
-	printf("\nEsta funcion retorna un puntero al carácter encontrado en la string, o puntero nulo si no se encuentra dicho carácter.\n\nResultado: %s\n\n", ft_strchr(str, ch));
+	printf("\nEsta funcion retorna un puntero al carácter encontrado en la string,\
+   	o puntero nulo si no se encuentra dicho carácter.\
+	\n\nResultado: %s\n\n", ft_strchr(str, ch));
 }*/

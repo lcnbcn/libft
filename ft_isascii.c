@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 21:21:59 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/07 13:43:07 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/10 12:50:21 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int	main(void)
 
 	asc  ='+';
 
-	printf("\nEsta funcion retorna 1 si pertene a la tabla ASCII, 0 si no.\n\nResultado: %i\n\n", ft_isascii(asc));
+	printf("\nEsta funcion retorna 1 si pertene a la tabla ASCII, 0 si no.\
+	\n\nResultado: %i\n\n", ft_isascii(asc));
 }*/

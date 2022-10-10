@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 11:20:13 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/08 22:36:26 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/10 13:01:36 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-
+/*
 int	main(void)
 {
 	char	buffer[8];
@@ -39,4 +39,4 @@ int	main(void)
 	printf("\nEsta funcion retorna su primer argumento.\n\nResultado: %s\n\n", res);
 
 	return (0);
-}
+}*/

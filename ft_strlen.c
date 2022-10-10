@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 16:02:21 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/07 14:03:43 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/10 12:56:30 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int	main(void)
 	char	*str = "Esta string contiene 35  carecteres ";
 
 
-	printf("\nEsta funcion retorna un intero que indica la longitud de una string.\n\nResultado: %zu\n\n", ft_strlen(str));
+	printf("\nEsta funcion retorna un intero que indica la longitud de una string.\
+	\n\nResultado: %zu\n\n", ft_strlen(str));
 }*/

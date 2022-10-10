@@ -117,4 +117,22 @@ int	main(void)
 	printf("\nEsta funcion retorna su primer argumento.\n\nResultado: %s\n\n", res);
 
 	return (0);
-}i
+}
+
+
+int	main(void)
+{
+	//testear bzero
+
+	char	str[8];
+	size_t	nbr;
+	char	*res;
+
+	nbr = 4;
+	res = (char *)ft_bzero(str, nbr);
+
+	printf("\nEsta funcion rellana de zeros la srting asignada.\
+	\n\nResultado: %s\n\n", res);
+
+	return (0);
+}

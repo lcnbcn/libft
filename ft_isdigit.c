@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 22:55:14 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/07 13:09:29 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/10 12:51:18 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int	main(void)
 
 	dig ='7';
 
-	printf("\nEsta funcion retorna 1 si es un digito, 0 si no.\n\nResultado: %i\n\n", ft_isdigit(dig));
+	printf("\nEsta funcion retorna 1 si es un digito, 0 si no.\
+	\n\nResultado: %i\n\n", ft_isdigit(dig));
 }*/

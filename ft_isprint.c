@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 20:45:05 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/07 13:49:08 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/10 12:52:12 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int	main(void)
 
 	print ='7';
 
-	printf("\nEsta funcion retorna 1 si es printable, 0 si no.\n\nResultado: %i\n\n", ft_isprint(print));
+	printf("\nEsta funcion retorna 1 si es printable, 0 si no.\
+	\n\nResultado: %i\n\n", ft_isprint(print));
 }*/

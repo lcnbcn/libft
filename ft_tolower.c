@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 23:25:19 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/07 14:46:21 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/10 12:59:45 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,7 @@ int	main(void)
 	int	ch  ='Z';
 
 
-	printf("\nEsta funcion retorna un caracter en minuscula en caso que esta sea mayuscula.\n\nResultado: %c\n\n", ft_tolower(ch));
+	printf("\nEsta funcion retorna un caracter en minuscula en \
+	caso que esta sea mayuscula.\
+	\n\nResultado: %c\n\n", ft_tolower(ch));
 }*/	
