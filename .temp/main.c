@@ -131,8 +131,21 @@ int	main(void)
 	nbr = 4;
 	res = (char *)ft_bzero(str, nbr);
 
-	printf("\nEsta funcion rellana de zeros la srting asignada.\
+	printf("\nEsta funcion rellena de zeros la srting asignada.\
 	\n\nResultado: %s\n\n", res);
 
+	return (0);
+}
+
+int	main(void)
+{
+	const char	dst[20] = "destino";
+	const char	src[20] = "fuente";
+	size_t	nb;
+
+	nb = 20;
+
+	printf("\nEsta funcion copia n bytes de src para dst. \
+			\nResultado: %s\n\n", ft_memcpy((void*)dst, (void *)src, nb));
 	return (0);
 }
