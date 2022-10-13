@@ -6,7 +6,7 @@
 #    By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 21:12:10 by lucida-s          #+#    #+#              #
-#    Updated: 2022/10/11 13:36:30 by lucida-s         ###   ########.fr        #
+#    Updated: 2022/10/13 12:01:28 by lucida-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SRC = ft_isalpha.c ft_toupper.c ft_isdigit.c \
 	ft_tolower.c ft_isalnum.c ft_strlen.c \
 	ft_isprint.c ft_isascii.c ft_strchr.c \
 	ft_strrchr.c ft_memset.c ft_bzero.c \
-	ft_memcpy.c 
+	ft_memcpy.c ft_memmove.c
 
 OBJS = $(SRC:.c=.o)
 HEADER = libft.h

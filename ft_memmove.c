@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 15:06:00 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/13 18:39:23 by lucida-s         ###   ########.fr       */
+/*   Created: 2022/10/11 19:53:27 by lucida-s          #+#    #+#             */
+/*   Updated: 2022/10/13 18:04:37 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	cnt;
 	char	*cdst;
 	char	*csrc;
-
+	
+	len = ft_strlen(src);
 	cdst = (char *)dst;
 	csrc = (char *)src;
 	cnt = 0;
 	if (!src && !dst)
 		return (0);
-	while (cnt < n)
+	while (cnt < len)
 	{
 		cdst[cnt] = csrc[cnt];
 		cnt++;
 	}
 	return (dst);
 }
-/*
+
 int	main(void)
 {
 	const char	dst[20] = "destino";
@@ -38,8 +39,7 @@ int	main(void)
 	size_t	nb;
 
 	nb = 20;
-
 	printf("\nEsta funcion copia n bytes de src para dst. \
-			\nResultado: %s\n\n", ft_memcpy((void*)dst, (void *)src, nb));
+			\nResultado: %s\n\n", ft_memmove((void*)dst, (const void *)src, nb));
 	return (0);
-}*/
+}
