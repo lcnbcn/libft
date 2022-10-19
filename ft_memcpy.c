@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:06:00 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/13 18:39:23 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/19 16:34:27 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,13 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	cnt;
-	char	*cdst;
-	char	*csrc;
 
-	cdst = (char *)dst;
-	csrc = (char *)src;
 	cnt = 0;
 	if (!src && !dst)
 		return (0);
 	while (cnt < n)
 	{
-		cdst[cnt] = csrc[cnt];
+		((unsigned char *)dst)[cnt] = ((unsigned char *)src)[cnt];
 		cnt++;
 	}
 	return (dst);

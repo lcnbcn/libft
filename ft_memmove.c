@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 19:53:27 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/13 18:04:37 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/19 17:14:34 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,31 +15,38 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	cnt;
-	char	*cdst;
-	char	*csrc;
-	
-	len = ft_strlen(src);
-	cdst = (char *)dst;
-	csrc = (char *)src;
+
 	cnt = 0;
-	if (!src && !dst)
-		return (0);
-	while (cnt < len)
+	if (!dst && !src)
 	{
-		cdst[cnt] = csrc[cnt];
-		cnt++;
+		return (0);
 	}
-	return (dst);
+	if (dst < src)
+	{
+		while (cnt < len)
+		{
+			((unsigned char *)dst)[cnt] = ((unsigned char *)src)[cnt];
+			cnt++;
+		}
+		return (dst);
+	}
+	else
+	{
+		return (ft_memcpy(dst, src, len));
+	}
 }
 
+
+/*
 int	main(void)
 {
-	const char	dst[20] = "destino";
-	const char	src[20] = "fuente";
+	const char	dst[12] = "hola";
+	const char	src[12] = "12345678";
 	size_t	nb;
 
-	nb = 20;
-	printf("\nEsta funcion copia n bytes de src para dst. \
+	nb = 4;
+
+	printf("\nMemcpy copia n bytes de src para dst. \
 			\nResultado: %s\n\n", ft_memmove((void*)dst, (const void *)src, nb));
 	return (0);
-}
+}*/
