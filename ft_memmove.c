@@ -6,38 +6,32 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 19:53:27 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/19 20:00:26 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/20 10:52:33 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	cnt;
-
-	cnt = 0;
 	if (!dst && !src)
 	{
 		return (0);
 	}
-	if (dst < src)
+	if (dst > src)
 	{
-		while (cnt < len)
+		while (len--)
 		{
-			((unsigned char *)dst)[cnt] = ((unsigned char *)src)[cnt];
-			cnt++;
+			((unsigned char *)dst)[len] = ((unsigned char *)src)[len];
 		}
-		return (dst);
 	}
 	else
 	{
-		return (ft_memcpy(dst, src, len));
+		ft_memcpy(dst, src, len);
 	}
+	return (dst);
 }
-
-
+/*
 int	main(void)
 {
 	const char	dst[12] = "12345678";
@@ -51,4 +45,4 @@ int	main(void)
 	printf("\nMemcpy copia n bytes de src para dst. \
 			\nResultado: %s\n\n", memmove((void*)dst2 +2, (const void *)dst2, nb));
 	return (0);
-}
+}*/
