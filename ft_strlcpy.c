@@ -1,40 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 20:54:55 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/21 19:44:50 by lucida-s         ###   ########.fr       */
+/*   Created: 2022/10/24 10:30:04 by lucida-s          #+#    #+#             */
+/*   Updated: 2022/10/24 18:33:39 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
+	size_t	x;
 
-	i = ft_strlen(s);
-	while (i > 0)
+	i = 0;
+	x = ft_strlen(src);
+	if (size != 0)
 	{
-		if ((char)c == s[i])
-			return ((char *)&s[i]);
-		i--;
+		while (src[i] != '\0' && i < size - 1)
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	if ((char)c == s[i])
-		return ((char *)&s[i]);
-	return (0);
+	return (x);
 }
 /*
-int main() 
+int	main(void)
 {
-
-	  char *str = "supercalicragilisticoespialidoso";
-	  int ch = 'g';
-
-	  printf("%s", ft_strrchr(str, ch));
-
-	  return (0);
+	char dest[] = "barracuda";
+	char src[] = "Barcelona me encanta";
+	printf("%lu | %s", ft_strlcpy(dest, src, 14), dest);
+	return (0);
 }*/
