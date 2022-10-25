@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:03:48 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/24 19:24:08 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/25 20:10:00 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,29 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
+	size_t	dst_len;
+	size_t	src_len;
 	size_t	i;
-	size_t	x;
+	size_t	j;
 
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
 	i = 0;
-	x = ft_strlen(src);
-	if (size != 0)
+	j = 0;
+	if (size > dst_len)
 	{
-		while (src[i] != '\0' && i < size - 1)
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
+		j = dst_len + src_len;
 	}
-	return (x);
-}
-
-int	main(void)
-{
-	char dest[] = "hello";
-	char src[] = "12345";
-	printf("%lu | %s", ft_strlcat(dest, src, 12), dest);
-	return (0);
+	else
+	{
+		j = size + src_len;
+	}
+	while (src[i] && dst_len + 1 < size)
+	{
+		dst[dst_len] = src[i];
+		dst_len++;
+		i++;
+	}
+	dst[dst_len] = '\0';
+	return (j);
 }
