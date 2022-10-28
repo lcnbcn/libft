@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:35:08 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/10 12:49:02 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/28 09:55:11 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-/*
-int	main(void)
-{
-	// testear ft_isalpha
-
-	int	ch;
-
-	ch = '1';
-
-	printf("\nEsta funcion retorna 1 si es un caracter, 0 si no.\
-	\n\nResultado: %i\n\n", ft_isalpha(ch));
-}*/

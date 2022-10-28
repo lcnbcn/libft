@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 20:54:55 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/21 19:44:50 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/28 10:59:04 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (0);
 }
-/*
-int main() 
-{
-
-	  char *str = "supercalicragilisticoespialidoso";
-	  int ch = 'g';
-
-	  printf("%s", ft_strrchr(str, ch));
-
-	  return (0);
-}*/

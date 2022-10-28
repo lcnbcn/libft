@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 22:55:14 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/10 12:51:18 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/28 09:58:30 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,6 @@
 int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
-	{
 		return (1);
-	}
 	return (0);
 }
-/*
-int	main(void)
-{
-	// testear ft_isdigit
-
-	int dig;
-
-	dig ='7';
-
-	printf("\nEsta funcion retorna 1 si es un digito, 0 si no.\
-	\n\nResultado: %i\n\n", ft_isdigit(dig));
-}*/

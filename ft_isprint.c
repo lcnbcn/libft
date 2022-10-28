@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 20:45:05 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/10/10 12:52:12 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/10/28 09:59:40 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,6 @@
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
-	{
 		return (1);
-	}
 	return (0);
 }
-/*
-int	main(void)
-{
-	// testear ft_isprint
-
-	int print;
-
-	print ='7';
-
-	printf("\nEsta funcion retorna 1 si es printable, 0 si no.\
-	\n\nResultado: %i\n\n", ft_isprint(print));
-}*/
