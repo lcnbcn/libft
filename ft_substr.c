@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 20:09:41 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/11/02 15:47:55 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/11/04 14:37:35 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		ft_bzero((void *)ss, 1);
 		return (ss);
 	}
-	else
-	{
-		ss = (char *)malloc(len + 1);
-		if (!ss)
-			return (0);
-	}
+	if (size - start < len)
+		len = size - start;
+	ss = (char *)malloc(len + 1);
+	if (!ss)
+		return (0);
 	s = (s + (char const)start);
-	ft_memcpy(ss, s, len + 1);
+	ft_memcpy(ss, s, len);
 	ss[len] = '\0';
 	return (ss);
 }
