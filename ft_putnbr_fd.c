@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 11:42:07 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/11/08 18:10:19 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/11/08 18:23:13 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ static void	ft_putchar(int x, int fd)
 	a = x + '0';
 	write(fd, &a, 1);
 }
+
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
