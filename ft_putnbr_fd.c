@@ -6,27 +6,30 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 11:42:07 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/11/05 12:33:10 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/11/08 18:10:19 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static void	ft_putchar(int x, int fd)
+{
+	char	a;
+
+	a = x + '0';
+	write(fd, &a, 1);
+}
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (fd < 0)
-		return ;
-	if (n == 0)
-		write(fd, "0", 1);
 	if (n == -2147483648)
 	{
 		write(fd, "-2147483648", 11);
-		return ;
 	}
 	else if (n < 0)
 	{
 		n = -n;
 		write(fd, "-", 1);
+		ft_putnbr_fd(n, fd);
 	}
 	else if (n > 9)
 	{
@@ -35,12 +38,6 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	else
 	{
-		ft_putchar_fd((char)n, fd);
+		ft_putchar(n, fd);
 	}
 }
-
-/*int	main(void)
-{
-	ft_putnbr(42);
-	return (0);
-}*/
