@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:30:04 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/11/09 13:49:48 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/11/09 17:24:46 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	i = -1;
 	if (size != 0)
 	{
-		while (src[++i] != '\0' && i < size - 1)
+		while (src[++i] != '\0' && i < size -1)
 			dst[i] = src[i];
 		dst[i] = '\0';
 	}
