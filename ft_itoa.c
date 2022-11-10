@@ -1,19 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 19:21:43 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/11/08 20:43:33 by lucida-s         ###   ########.fr       */
+/*   Created: 2022/11/10 17:56:07 by lucida-s          #+#    #+#             */
+/*   Updated: 2022/11/10 18:05:18 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+static size_t	nbrlen(long n)
 {
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	size_t	i;
+
+	i = 0;
+	if (n == 0)
+	{
+		i++;
+		return (i);
+	}
+	if (n < 0)
+	{
+		n *= -1;
+		i++;
+	}
+	while (n > 0)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i);
 }
+char	*ft_itoa(int n)
