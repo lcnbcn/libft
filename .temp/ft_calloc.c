@@ -1,37 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/30 19:38:56 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/11/15 14:23:24 by lucida-s         ###   ########.fr       */
+/*   Created: 2022/10/29 18:59:41 by lucida-s          #+#    #+#             */
+/*   Updated: 2022/10/29 19:22:16 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t len)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	i;
-	size_t	j;
+	void	*x;
 
-	i = 0;
-	if (s2[0] == '\0')
-		return ((char *)s1);
-	while (s1[i] != '\0')
-	{
-		j = 0;
-		while (s1[i + j] == s2[j] && (i + j) < len)
-		{
-			if (s1[i + j] == '\0' && s2[j] == '\0')
-				return ((char *)&s1[i]);
-			j++;
-		}
-		if (s2[j] == '\0')
-			return ((char *)s1 + i);
-		i++;
-	}
-	return (0);
+	x = malloc(count * size);
+	if (!x)
+		return (0);
+	ft_bzero(x, count * size);
+	return (x);
 }

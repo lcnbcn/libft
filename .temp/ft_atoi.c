@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/30 19:38:56 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/11/15 14:23:24 by lucida-s         ###   ########.fr       */
+/*   Created: 2022/10/28 17:53:05 by lucida-s          #+#    #+#             */
+/*   Updated: 2022/11/11 13:04:16 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t len)
+int	ft_atoi(const char *s)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
+	int	vpn;
 
 	i = 0;
-	if (s2[0] == '\0')
-		return ((char *)s1);
-	while (s1[i] != '\0')
+	vpn = 1;
+	while (*s == 32 || (*s >= 9 && *s <= 13))
+		s++;
+	if (*s == 45)
+		vpn *= -1;
+	if (*s == 43 || *s == 45)
+		s++;
+	while (ft_isdigit(*s))
 	{
-		j = 0;
-		while (s1[i + j] == s2[j] && (i + j) < len)
-		{
-			if (s1[i + j] == '\0' && s2[j] == '\0')
-				return ((char *)&s1[i]);
-			j++;
-		}
-		if (s2[j] == '\0')
-			return ((char *)s1 + i);
-		i++;
+		i = i * 10 + *s - 48;
+		s++;
 	}
-	return (0);
+	return (i * vpn);
 }

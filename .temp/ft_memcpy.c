@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/30 19:38:56 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/11/15 14:23:24 by lucida-s         ###   ########.fr       */
+/*   Created: 2022/10/10 15:06:00 by lucida-s          #+#    #+#             */
+/*   Updated: 2022/10/28 10:01:41 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t len)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	i;
-	size_t	j;
+	size_t	cnt;
 
-	i = 0;
-	if (s2[0] == '\0')
-		return ((char *)s1);
-	while (s1[i] != '\0')
-	{
-		j = 0;
-		while (s1[i + j] == s2[j] && (i + j) < len)
-		{
-			if (s1[i + j] == '\0' && s2[j] == '\0')
-				return ((char *)&s1[i]);
-			j++;
-		}
-		if (s2[j] == '\0')
-			return ((char *)s1 + i);
-		i++;
-	}
-	return (0);
+	cnt = -1;
+	if (!src && !dst)
+		return (0);
+	while (++cnt < n)
+		((unsigned char *)dst)[cnt] = ((unsigned char *)src)[cnt];
+	return (dst);
 }

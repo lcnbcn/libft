@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/30 19:38:56 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/11/15 14:23:24 by lucida-s         ###   ########.fr       */
+/*   Created: 2022/10/11 19:53:27 by lucida-s          #+#    #+#             */
+/*   Updated: 2022/10/28 10:06:01 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	if (s2[0] == '\0')
-		return ((char *)s1);
-	while (s1[i] != '\0')
-	{
-		j = 0;
-		while (s1[i + j] == s2[j] && (i + j) < len)
-		{
-			if (s1[i + j] == '\0' && s2[j] == '\0')
-				return ((char *)&s1[i]);
-			j++;
-		}
-		if (s2[j] == '\0')
-			return ((char *)s1 + i);
-		i++;
-	}
-	return (0);
+	if (!dst && !src)
+		return (0);
+	if (dst > src)
+		while (len--)
+			((unsigned char *)dst)[len] = ((unsigned char *)src)[len];
+	else
+		ft_memcpy(dst, src, len);
+	return (dst);
 }

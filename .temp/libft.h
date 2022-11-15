@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:56:58 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/11/15 14:13:03 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/11/11 09:45:13 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,4 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char *s, int fd);
 char	*ft_itoa(int n);
-char	*ft_strtrim(char const *s1, char const *set);
-char	*ft_strnstr(const char *s1, const char *s2, size_t len);
-
 #endif

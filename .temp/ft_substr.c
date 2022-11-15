@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/30 19:38:56 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/11/15 14:23:24 by lucida-s         ###   ########.fr       */
+/*   Created: 2022/10/30 20:09:41 by lucida-s          #+#    #+#             */
+/*   Updated: 2022/11/04 14:37:35 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	char	*ss;
+	size_t	size;
 
-	i = 0;
-	if (s2[0] == '\0')
-		return ((char *)s1);
-	while (s1[i] != '\0')
+	if (!s)
+		return (0);
+	size = ft_strlen(s);
+	if (start >= size)
 	{
-		j = 0;
-		while (s1[i + j] == s2[j] && (i + j) < len)
-		{
-			if (s1[i + j] == '\0' && s2[j] == '\0')
-				return ((char *)&s1[i]);
-			j++;
-		}
-		if (s2[j] == '\0')
-			return ((char *)s1 + i);
-		i++;
+		ss = (char *)malloc(1);
+		if (!ss)
+			return (0);
+		ft_bzero((void *)ss, 1);
+		return (ss);
 	}
-	return (0);
+	if (size - start < len)
+		len = size - start;
+	ss = (char *)malloc(len + 1);
+	if (!ss)
+		return (0);
+	s = (s + (char const)start);
+	ft_memcpy(ss, s, len);
+	ss[len] = '\0';
+	return (ss);
 }
