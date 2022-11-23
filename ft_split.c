@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 18:12:59 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/11/22 19:23:20 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/11/23 21:47:08 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,44 @@ static size_t	cp(const char *s, char c)
 			i++;
 	}
 	return (count);
+}
+
+static char	*pd(const char *str, int s, int f)
+{
+	char	*p;
+	int		i;
+
+	i = 0;
+	p = malloc((f - s + 1) * sizeof(char));
+	while (s < f)
+		p[i++] = str[s++];
+	p[i] = '\0';
+	return (p);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	size_t	i;
+	size_t	j;
+	int		index;
+	char	**split;
+
+	if (!s || !(split = malloc((cp(s, c) + 1) * sizeof(char *))))
+		return (0);
+	i = 0;
+	j = 0;
+	index = -1;
+	while (i <= ft_strlen(s))
+	{
+		if (s[i] != c && index < 0)
+			index = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
+		{
+			split[j++] = pd(s, index, i);
+			index = -1;
+		}
+		i++;
+	}
+	split[j] = 0;
+	return (split);
 }

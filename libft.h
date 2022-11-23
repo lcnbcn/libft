@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:56:58 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/11/15 19:56:08 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/11/23 19:38:05 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,5 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	**ft_split(const char *s, char c);
 #endif
