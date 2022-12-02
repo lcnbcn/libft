@@ -6,7 +6,7 @@
 #    By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 21:12:10 by lucida-s          #+#    #+#              #
-#    Updated: 2022/11/23 19:36:04 by lucida-s         ###   ########.fr        #
+#    Updated: 2022/12/02 11:47:52 by lucida-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,11 @@ SRC = 	ft_isalpha.c ft_toupper.c ft_isdigit.c \
 	ft_strnstr.c ft_strmapi.c ft_striteri.c \
 	ft_split.c
 
+BONUS_C =	ft_lstnew.c
+
+
 OBJS = $(SRC:.c=.o)
+BONUS = $(BONUS_C:.c=.o)
 HEADER = libft.h
 LIB = ar -rcs
 CFLAGS = -Wall -Werror -Wextra
@@ -32,10 +36,13 @@ CFLAGS = -Wall -Werror -Wextra
 %.o:%.c
 	gcc $(CFLAGS) -I $(HEADER) -c $< -o $@
 
-all: $(NAME)
-
 $(NAME): $(OBJS) $(HEADER)
 	$(LIB) $(NAME) $(OBJS)
+
+all: $(NAME)
+
+bonus: $(NAME) $(BONUS)
+	$(LIB) $(NAME) $(BONUS)
 
 clean:
 	rm -f $(OBJS)
@@ -45,4 +52,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

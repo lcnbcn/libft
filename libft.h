@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:56:58 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/11/23 19:38:05 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/12/02 11:32:07 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	int		*content;
+	struct s_list	*next;
+}t_list;
 
 int		ft_isalpha(int c);
 int		ft_toupper(int c);
@@ -50,4 +56,6 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	**ft_split(const char *s, char c);
+
+t_list	*ft_lstnew(void *content);
 #endif
