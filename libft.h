@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:56:58 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/12/02 11:32:07 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/12/03 13:44:38 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 typedef struct s_list
 {
-	int		*content;
+	void			*content;
 	struct s_list	*next;
 }t_list;
 
@@ -58,4 +58,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	**ft_split(const char *s, char c);
 
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new_node);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new_node);
 #endif
