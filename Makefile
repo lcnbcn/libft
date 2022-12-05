@@ -6,7 +6,7 @@
 #    By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 21:12:10 by lucida-s          #+#    #+#              #
-#    Updated: 2022/12/03 14:23:12 by lucida-s         ###   ########.fr        #
+#    Updated: 2022/12/05 10:04:58 by lucida-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRC = 	ft_isalpha.c ft_toupper.c ft_isdigit.c \
 	ft_putchar_fd.c ft_putstr_fd.c ft_putnbr_fd.c \
 	ft_putendl_fd.c ft_itoa.c ft_strtrim.c \
 	ft_strnstr.c ft_strmapi.c ft_striteri.c \
-	ft_split.c ft_lstdelone.c
+	ft_split.c ft_lstdelone.c ft_lstclear.c \
 
 BONUS_C =	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 		ft_lstlast.c ft_lstadd_back.c 

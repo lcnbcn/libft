@@ -6,7 +6,7 @@
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 18:12:59 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/12/01 21:10:08 by lucida-s         ###   ########.fr       */
+/*   Updated: 2022/12/05 12:48:43 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ static char	*pd(const char *str, int s, int f)
 
 	i = 0;
 	p = malloc((f - s + 1) * sizeof(char));
+	if (!p)
+		return (0);
 	while (s < f)
 		p[i++] = str[s++];
 	p[i] = '\0';
@@ -51,7 +53,8 @@ char	**ft_split(char const *s, char c)
 	int		index;
 	char	**split;
 
-	if (!s || !(split = malloc((cp(s, c) + 1) * sizeof(char *))))
+	split = malloc((cp(s, c) + 1) * sizeof(char *));
+	if (!s || !split)
 		return (0);
 	i = 0;
 	j = 0;
