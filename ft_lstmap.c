@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/30 20:09:41 by lucida-s          #+#    #+#             */
-/*   Updated: 2022/12/10 21:25:06 by lucida-s         ###   ########.fr       */
+/*   Created: 2022/12/10 17:09:09 by lucida-s          #+#    #+#             */
+/*   Updated: 2022/12/10 18:16:23 by lucida-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *str, unsigned int start, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*sub;
-	size_t	i;
+	t_list	*new_lst;
+	t_list	*elem;
+	t_list	*temp;
 
-	if (start >= ft_strlen(str))
-		start = ft_strlen(str);
-	if (ft_strlen(str) - start < len)
-		len = ft_strlen(str) - start;
-	sub = (char *)malloc(len + 1);
-	if (sub != 0)
+	if (!lst)
+		return (0);
+	new_lst = 0;
+	while (lst)
 	{
-		i = 0;
-		while (i < len)
+		temp = f(lst->content);
+		elem = ft_lstnew(temp);
+		if (!elem)
 		{
-			sub[i] = str[start];
-			i++;
-			start++;
+			ft_lstclear(&new_lst, del);
+			del(temp);
+			return (0);
 		}
-		sub[i] = '\0';
-		return (sub);
+		ft_lstadd_back(&new_lst, elem);
+		lst = lst->next;
 	}
-	return (0);
+	return (new_lst);
 }

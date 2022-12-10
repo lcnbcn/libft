@@ -6,7 +6,7 @@
 #    By: lucida-s <lucida-s@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 21:12:10 by lucida-s          #+#    #+#              #
-#    Updated: 2022/12/05 17:48:18 by lucida-s         ###   ########.fr        #
+#    Updated: 2022/12/10 18:04:07 by lucida-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ SRC = 	ft_isalpha.c ft_toupper.c ft_isdigit.c \
 
 BONUS_C =	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 			ft_lstlast.c ft_lstadd_back.c \
-			ft_lstdelone.c ft_lstclear.c  ft_lstiter.c
+			ft_lstdelone.c ft_lstclear.c  ft_lstiter.c ft_lstmap.c
 
 OBJS =		$(SRC:.c=.o)
 
